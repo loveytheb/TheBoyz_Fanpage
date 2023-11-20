@@ -115,7 +115,7 @@ const LetterContainer = styled.div`
   margin-left: 100px;
   border: 2px solid black;
 `
-const NicknameText = styled.p`
+const NicknameAndText = styled.p`
   font-size: 15px;
   height: 20px;
   display: flex;
@@ -269,7 +269,7 @@ function Detail() {
       .map((item) => {
         return (
           <LetterContainer key={item.id}>
-            <NicknameText>{item.nickname}</NicknameText>
+            <NicknameAndText>{item.nickname}</NicknameAndText>
             <ContentText>{item.content}</ContentText>
             <LetterBtn>
             <DeleteBtn onClick={() => {DeleteLetterHandler(item.id)}}>삭제</DeleteBtn>
@@ -279,7 +279,7 @@ function Detail() {
         )
       })
     }
-  </LetterList>
+    </LetterList>
     </>
   )
 }
